@@ -71,7 +71,7 @@ public class Main {
     }
 
     public static String updateUser(User user) throws IOException {
-        URL url = new URL(BASE_URL + USERS_ENDPOINT + user.getId());
+        URL url = new URL(BASE_URL + USERS_ENDPOINT +"/"+ user.getId());
         HttpURLConnection conection = (HttpURLConnection) url.openConnection();
         conection.setRequestMethod("PUT");
         conection.setRequestProperty("Content-Type", "application/json");
